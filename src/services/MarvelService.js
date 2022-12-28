@@ -24,6 +24,14 @@ class MarvelService {
     }
 
     _transformChracter = (char) => {
+        if (char.description.length > 0) {
+            if (char.description.length > 228) {
+                char.description = char.description.slice(0, 210) + '...';
+            }
+        } else {
+            char.description = 'Can`t find any description'
+        }
+
         return {
             name: char.name,
             description: char.description,

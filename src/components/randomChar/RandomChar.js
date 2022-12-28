@@ -29,6 +29,8 @@ class RandomChar extends Component {
 
     render () {
         const {char: {name, description, thumbnail, homepage, wiki}} = this.state;
+        
+
         return (
             <div className="randomchar">
                 <div className="randomchar__block">
