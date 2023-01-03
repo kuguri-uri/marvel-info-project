@@ -7,10 +7,13 @@ import './charList.scss';
 // import abyss from '../../resources/img/abyss.jpg';
 
 class CharList extends Component {
+
     state = {
         charList: [],
         loading: true,
-        error: false
+        error: false,
+        newItemLoading: false,
+        offset: 210
     }
 
     marvelService = new MarvelService();
@@ -20,16 +23,25 @@ class CharList extends Component {
     }
 
     onReqest = (offset) => {
+        this.onCharListLoading();
         this.marvelService.getAllCharacters(offset)
             .then(this.onCharListLoaded)
             .catch(this.onError)
     }
 
-    onCharListLoaded = (charList) => {
+    onCharListLoading = () => {
         this.setState({
-            charList, 
-            loading: false
+            newItemLoading: true
         })
+    }
+
+    onCharListLoaded = (newCharList) => {
+        this.setState(({offset, charList}) => ({
+            charList: [...charList, ...newCharList], 
+            loading: false,
+            newItemLoading: false,
+            offset: offset + 9
+        }))
     }
 
     onCharLoading = () => {
@@ -72,7 +84,7 @@ class CharList extends Component {
 
     render () {
 
-        const {charList, loading, error} = this.state;
+        const {charList, loading, error, offset, newItemLoading} = this.state;
 
         const items = this.renderItems(charList);
         
@@ -86,7 +98,10 @@ class CharList extends Component {
                 {spinner}
                 {content}
     
-                <button className="button button__main button__long">
+                <button 
+                    className="button button__main button__long"
+                    disabled={newItemLoading}
+                    onClick={() => this.onReqest(offset)}>
                     <div className="inner">load more</div>
                 </button>
             </div>
