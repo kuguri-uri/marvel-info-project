@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/marvel-info-crud-app/static/css/main.e4e6ec41.chunk.css",
+    "main.js": "/marvel-info-crud-app/static/js/main.132c70a1.chunk.js",
+    "main.js.map": "/marvel-info-crud-app/static/js/main.132c70a1.chunk.js.map",
+    "runtime-main.js": "/marvel-info-crud-app/static/js/runtime-main.2a0e9573.js",
+    "runtime-main.js.map": "/marvel-info-crud-app/static/js/runtime-main.2a0e9573.js.map",
+    "static/js/2.a26fdf47.chunk.js": "/marvel-info-crud-app/static/js/2.a26fdf47.chunk.js",
+    "static/js/2.a26fdf47.chunk.js.map": "/marvel-info-crud-app/static/js/2.a26fdf47.chunk.js.map",
+    "index.html": "/marvel-info-crud-app/index.html",
+    "static/css/main.e4e6ec41.chunk.css.map": "/marvel-info-crud-app/static/css/main.e4e6ec41.chunk.css.map",
+    "static/js/2.a26fdf47.chunk.js.LICENSE.txt": "/marvel-info-crud-app/static/js/2.a26fdf47.chunk.js.LICENSE.txt",
+    "static/media/error.42292aa1.gif": "/marvel-info-crud-app/static/media/error.42292aa1.gif",
+    "static/media/mjolnir.61f31e18.png": "/marvel-info-crud-app/static/media/mjolnir.61f31e18.png",
+    "static/media/vision.067d4ae1.png": "/marvel-info-crud-app/static/media/vision.067d4ae1.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.2a0e9573.js",
+    "static/js/2.a26fdf47.chunk.js",
+    "static/css/main.e4e6ec41.chunk.css",
+    "static/js/main.132c70a1.chunk.js"
+  ]
+}
