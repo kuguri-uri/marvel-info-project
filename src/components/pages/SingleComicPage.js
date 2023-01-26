@@ -40,7 +40,6 @@ const SingleComicPage = () => {
             {content}
         </>
     )
-
 }
 
 const View = ({comic}) => {
