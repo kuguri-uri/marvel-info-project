@@ -1,4 +1,4 @@
-import {useState, useEffect, useRef} from 'react';
+import {useState, useEffect, useRef, useMemo} from 'react';
 import PropTypes from 'prop-types';
 import {CSSTransition, TransitionGroup} from 'react-transition-group';
 
@@ -104,10 +104,14 @@ const CharList = (props) => {
             </ul>
         )
     }
+
+    const elements = useMemo(() => {
+        return setContent(process, () => renderItems(charList), newItemLoading);
+    }, [process]);
     
     return (
         <div className="char__list">
-            {setContent(process, () => renderItems(charList), newItemLoading)}
+            {elements}
             <button 
                 disabled={newItemLoading} 
                 style={{'display' : charEnded ? 'none' : 'block'}}
